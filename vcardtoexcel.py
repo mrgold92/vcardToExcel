@@ -5,7 +5,7 @@ import pandas as pd
 import os
 
 # Author: David Salazar Rodero
-# Date: 2019-10-10
+# Date: 2022-03-24
 # Version: 1.0
 # Description: This program converts a vcard file to an excel file
 
