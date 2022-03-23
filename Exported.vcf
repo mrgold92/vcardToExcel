@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:John Doe    
+FN:John Doe
+TEL;CELL:+1 617 555 1212
+EMAIL;HOME:johnDoe@example.org
+URL:http://www.example/com/doe
+ADR;HOME:;;2 Enterprise Avenue;Worktown;USA;1111
+END:VCARD
