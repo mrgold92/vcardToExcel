@@ -4,6 +4,11 @@ import xlrd
 import pandas as pd
 import os
 
+# Author: David Salazar Rodero
+# Date: 2019-10-10
+# Version: 1.0
+# Description: This program converts a vcard file to an excel file
+
 d = {}
 def read_vcf():
     with open("john-doe.vcf") as inf:
@@ -48,51 +53,6 @@ def save_excel():
 
 
 def write_vcf(excel_file):
-    # '''
-    # Vamos a leer los datos del excel y crear un .vcf a partir de ahí
-    # '''
-    # # Leemos el excel
-    # wb = openpyxl.load_workbook(excel_file)
-    # ws = wb.active
-    # # Leemos las filas
-    # rows = ws.rows
-    # # Creamos un vcf
-    # vcf = vobject.vCard()
-    # # Iteramos sobre las filas
-    # # Ignoramos la primera fila, que es la cabecera
-   
-    # i = 0
-    # for row in rows: 
-    #     # Si estamos en la primera fila, salimos
-    #     if i == 0:
-    #         i += 1
-    #         continue
-    #     # Leemos los valores de cada fila
-    #     values = [cell.value for cell in row]
-    #     # Creamos todas las propiedades
-    #     vcf.add('fn')
-    #     vcf.add('tel')
-    #     vcf.add('email')
-    #     vcf.add('adr')
-       
-       
-    #     vcf.add('url')
-    #     # Asignamos los valores a las propiedades
-    #     vcf.fn.value = values[0]
-    #     vcf.tel.value = values[1]
-    #     vcf.email.value = values[2]
-    #     vcf.adr.value = values[3]
-    #     # vcf.adr.value.city = values[4]
-    #     # vcf.adr.value.country = values[5]
-    #     # vcf.adr.value.code = values[6]
-    #     vcf.url.value = values[7]
-    #     # Guardamos el vcf en un archivo
-    #     with open("john-doe2.vcf", "w") as outf:
-          
-    #         c = vcf.serialize()
-    #         # Serialize is not working
-    #         outf.write(c)
-
     excelfile = pd.ExcelFile(excel_file)
     column = excelfile.parse(excelfile.sheet_names[0])
     s = ""
